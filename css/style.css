@@ -69,7 +69,13 @@ header {
     grid-area: header;
 }
 
-header > img {
+header > figure {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+header > figure > img {
     width: 100%;
     opacity: 0.85;
     z-index: -1;
@@ -111,8 +117,12 @@ header.about_product_page > div > h1 {
     -webkit-text-stroke-color: black;
 }
 
-header.about_us_page > svg {
+header.about_us_page > figure {
     margin-top: 5rem;
+}
+
+header.about_us_page > figure > svg {
+    width: 100%;
 }
 
 .about_us_page {
