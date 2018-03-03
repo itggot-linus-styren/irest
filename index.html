@@ -5,30 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <title>IRest hemsida</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.css"></link>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <div class="hidden page" id="home_page">
+    <div class="hidden page" id="about_us_page">
+    <div class="hidden page" id="about_product_page">
+    <div class="mobile_nav">
+            <div id="menuToggle">
+                <input type="checkbox">
+                <span></span>
+                <span class="smaller"></span>
+                <span></span>
+                <div id="scrim"></div>
+                <ul id="menu">
+                    <div class="item">
+                        <a href="#home_page">
+                            <li>hem</li>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#about_us_page">
+                            <li>om oss</li>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#about_product_page">
+                            <li>om vår produkt</li>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#footer">
+                            <li>sociala medier</li>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </div>
     <div class="wrapper">
-        <nav>
-            <div class="logo">
+        <nav>            
+            <a href="#home_page"><div class="logo">
                 <img src="img/logo.png" alt="logo">
                 <pre>irest
 uf</pre>
-            </div>            
+            </div></a>
             <div class="buttons">
-                <a href="#">om oss</a>
-                <a href="#">om vår produkt</a>
-                <a href="#">sociala medier</a>
+                <a href="#about_us_page">om oss</a>
+                <a href="#about_product_page">om vår produkt</a>
+                <a href="#footer">sociala medier</a>
             </div>
-        </nav>
-        <header>
-            <img src="img/header.jpg" alt="bord med mycket grejer">
+        </nav>        
+        <header class="page_elm home_page">
+            <img class="bigger_content" src="img/header_big.jpg" alt="bord med mycket grejer">
+            <img class="smaller_content" src="img/header_small.jpg" alt="bord med mycket grejer">
             <div>
                 <h1>kolla in vår produkt och stöd gärna oss i vårt uf arbete</h1>
-                <a href="#">klicka här</a>
+                <a href="#about_product_page">klicka här</a>
             </div>
         </header>
-        <main>
+        <main class="page_elm home_page">
             <h1>vår vision</h1>
             <p>Vår vision är att bygga ett starkt varumärke och <b>revolutionera</b> glasögonmarknaden genom att främja 
 glasögon bärarnas vardag. Dessutom vill vi skapa vår produkt på ett nytänkande hållbart sätt med minimal 
@@ -36,17 +79,74 @@ miljöpåverkan. Detta innebär bl.a. att vår produktion och försäljning sker
 lösning på flertal problem som glasögon bärare kan känna igen sig vid, vår lösning är IRest. En innovativ, 
 stilren och smidig produkt som kan bli en del av din vardag, för en enklare vardag.</p>
         </main>
-        <left>
-            <img src="img/glasses.jpg" alt="bild på glasögon">
-        </left>
-        <right>
+        <img class="page_elm left home_page" src="img/glasses.jpg" alt="bild på glasögon">
+        <right class="page_elm home_page">
             <h2>no more!</h2>
             <p>Dina glasögon hör inte hemma på bordet, handfatskanten eller i någon låda. På följande platser är det väldigt lätt för dina glasögon att bli både repiga och smutsiga, de blir även lättare att tappa bort dem på något av dessa ställen.</p>
             <p>Med IRest är detta inte ett problem längre, förvara dina glasögon snyggt och smidigt i vår glasögonhållare.</p>
         </right>
-        <footer>
-            <div>Kontakta oss: <a href="mailto:irest.ungtforetagande@gmail.com">irest.ungtforetagande@gmail.com</a></div>
+        <header class="page_elm about_us_page">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 192.55 295.34"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0;}</style></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="SPLINE"><path class="cls-1" d="M192.45,290H144.24L62.4,185.28H73.67c34.52,0,50.24-19.19,50.24-37,0-18-15.72-37.36-50.24-37.36l-.3-11h.12l0-9.3-.14-5.2,9.85-.54c15.35-1.76,26.13-7.77,32.72-15.5L62.49,0H73.67C92.19,0,107.88,5.1,119,14.74c10.24,8.85,15.88,20.79,15.88,33.62A43.15,43.15,0,0,1,129.58,69l18.18,23.59,44.71-.3.07,11-50.17.33L122.85,78.32c-8.28,8.84-20.95,15.53-38.36,17.48v4.71c13.83,1.62,25.63,6.42,34.55,14.13,10.24,8.85,15.88,20.79,15.88,33.62,0,21-15.87,43.55-50.42,47.44L149.6,279h42.84Z"/></g><g id="SPLINE-2" data-name="SPLINE"><path class="cls-1" d="M85.49,11.83,122,59.15a31.21,31.21,0,0,0,1.95-10.79C123.91,32.57,111.8,15.71,85.49,11.83Z"/></g><g id="HATCH"><path d="M192.45,290H144.24L62.4,185.28H73.67c34.52,0,50.24-19.19,50.24-37,0-18-15.72-37.36-50.24-37.36l-.3-11h.12l0-9.3-.14-5.2,9.85-.54c15.35-1.76,26.13-7.77,32.72-15.5L62.49,0H73.67C92.19,0,107.88,5.1,119,14.74c10.24,8.85,15.88,20.79,15.88,33.62A43.15,43.15,0,0,1,129.58,69l18.18,23.59,44.71-.3.07,11-50.17.33L122.85,78.32c-8.28,8.84-20.95,15.53-38.36,17.48v4.71c13.83,1.62,25.63,6.42,34.55,14.13,10.24,8.85,15.88,20.79,15.88,33.62,0,21-15.87,43.55-50.42,47.44L149.6,279h42.84ZM85.49,11.83,122,59.15a31.21,31.21,0,0,0,1.95-10.79C123.91,32.57,111.8,15.71,85.49,11.83Z"/></g><g id="POLYLINE"><polyline class="cls-1" points="47.49 295.33 0 295.33 0 284.33 36.49 284.33 36.49 0.19 47.49 0.19 47.49 295.33"/></g><g id="HATCH-2" data-name="HATCH"><polygon points="47.49 295.33 0 295.33 0 284.33 36.49 284.33 36.49 0.19 47.49 0.19 47.49 295.33 47.49 295.33"/></g></g></g></svg>
+            <div>
+                <h1>Om oss</h1>
+            </div>            
+        </header>
+        <main class="page_elm about_us_page">
+            <h1>organisation och personal</h1>
+            <p>Vi är elever som går på IT-gymnasiet Göteborg och vi bygger tillsammans UF företaget IRest.</p>
+            <h2>VD: Vilma Tenghult</h2>
+            <p>VDs uppgift innebär att på bästa sätt delegera arbetsuppgifter mellan de anställda.</p>
+            <h2>Marknadsansvarig: Johanna Pesonen</h2>
+            <p>Skall hålla primärt ansvar för att produkten marknadsförs i sociala medier samt skapar ett attraktivt varumärke.</p>
+            <h2>Försäljningsansvarig: Edwin Pellbjer</h2>
+            <p>Ansvarar för att produkterna försäljs och att den produktionsansvarige hela tiden är informerad om efterfrågan.</p>
+            <h2>Ekonomiansvarig: Hugo Drakeskär</h2>
+            <p>Ansvarar för att budgeten är uppdaterad och korrekt. Samt att utgifter och inkomster dokumenteras.</p>
+            <h2>Webbansvarig: Linus Styrén</h2>
+            <p>Ansvarig för att vår webbplats underhålls och utvecklas. Samt att en möjlig webshop skapas.</p>
+        </main>
+        <header class="page_elm about_product_page">
+            <img class="bigger_content" src="img/about_product_header_big.jpg" alt="bild på produkt">
+            <img class="smaller_content" src="img/about_product_header_small.jpg" alt="bild på produkt">
+            <div>
+                <h1>om vår produkt</h1>
+            </div>            
+        </header>
+        <main class="page_elm about_product_page">
+            <h1>Affärsidé</h1>
+            <p>Vår affärside grundar sig i vår vilja att revolutionera glasögon användandet. Vår produkt är därmed en lösning på problem med glasögon användning, i form av en stilren hållare som har producerats på ett hållbart sätt.</p>
+            <h2>Kundgrupp</h2>
+            <p>Vår målgrupp är unga som gamla som använder glasögon. Även folk som bär solglasögon kommer vara en stor målgrupp. Vår produkt är funktionell för alla personer och alla sorters glasögon.</p>
+            <h2>Kundbehov</h2>
+            <p>Att kunna ha en plats för sina glasögon där man alltid vet var glasögonen är och kunna förvara glasögonen utan att repa eller tappa bort glasögonen.</p>
+            <h2>Produktidé</h2>
+            <p>Vår affärside innebär att tillverka en produkt för att hålla glasögon och som ska vara en produkt med  mångsidigt användningsområde, glasögon ska kunna vara i liggandes eller hängande position och kan användas i ett flertal olika miljöer: i främre delen av bilen; i sovrummet på nattduksbordet; i badrummet på spegeln eller kakel; i köket på kylskåpet - bara för att nämna några få exempel.</p>
+            <h2>Resurser</h2>
+            <p>Tillsammans har vi kompetens från både teknik och design vilket ger en mycket bra grund för att kunna tillverka produkten men också få designen att se bra ut. De produktionsmedel vi har tillgång till ligger i framkant och vi kan tillverka professionella och miljövänliga produkter.</p>
+        </main>
+        <img class="page_elm left about_product_page" src="img/3d-printer.jpg" alt="bild på 3d-skrivare">
+        <img class="page_elm right about_product_page" src="img/lasercutter.jpg" alt="bild på laserskärare">
+        <img class="page_elm below about_product_page" src="img/holder.jpg" alt="bild på glasögonhållare">
+        <footer id="footer">
+            <div>
+                <h3>Länkar</h3>
+                <a href="#home_page">Hem</a>
+                <a href="#about_us_page">Om oss</a>
+                <a href="#about_product_page">Om vår produkt</a>
+            </div>            
+            <div>
+                <h3>Sociala medier</h3>
+                <a href="https://www.instagram.com/irest.uf/"><i class="fa fa-instagram fa-5x"></i></a>
+                <a href="https://www.facebook.com/IRestUF/"><i class="fa fa-facebook fa-5x"></i></a>
+            </div>
+            <div>
+                <h3>E-mail</h3>
+                <div>Kontakta oss: <a href="mailto:irest.ungtforetagande@gmail.com">irest.ungtforetagande@gmail.com</a></div>
+            </div>
         </footer>
     </div>
+    </div> <!-- about_product_page -->
+    </div> <!-- about_us_page -->
+    </div> <!-- home_page -->
 </body>
 </html>
